@@ -21,7 +21,7 @@ function App() {
   const[history, setHistory] = useState([{
     "command" : <p class="sender"><span className='visitor'>visitor</span>@<span className='domain'>legrandenzo.fr</span>:~$ first-visit</p>,
     "response" : <div className='commands'>
-        <p>Welcome to my portfolio 👋 ! Right down there is some commands about me !</p>
+        <p>Welcome to my portfolio 👋! Right down there are some details about me!</p>
         <p className="help" onClick={onClickCommand}> - social</p>
         <p className="help" onClick={onClickCommand}> - presentation</p>
         <p className="help" onClick={onClickCommand}> - projets</p>
@@ -31,7 +31,7 @@ function App() {
 
   const commands = {
     "help": <div className='commands'>
-    <p>Welcome to my portfolio 👋 ! Right down there is some commands about me !</p>
+    <p>Welcome to my portfolio 👋! Right down there are some details about me!</p>
     <p className="help" onClick={onClickCommand}> - social</p>
     <p className="help" onClick={onClickCommand}> - presentation</p>
     <p className="help" onClick={onClickCommand}> - projets</p>
@@ -45,10 +45,11 @@ function App() {
     "social": <div className='commands'>
         <p> - <a href="https://github.com/propaan" target="_blank">Github</a></p>
         <p> - <a href="https://www.linkedin.com/in/elgr5/" target="_blank">LinkedIn</a></p>
-        <p> - <a href="mailto:contact@legrandenzo.fr" target="_blank">E-Mail</a></p>
+        <p> - <a href="mailto:legrandenzo.pro@gmail.com" target="_blank">E-Mail</a></p>
     </div>,
     "presentation": <div className='commands'>
-        <p>Hello I'm Enzo ! A French student in computer sciences ! I would be a web developer. 👨‍🎓</p>
+        <p>Hello, I'm Enzo, a computer science student based in France with a passion for web development. Currently pursuing my degree, I aspire to become a skilled web developer. 👨‍🎓</p>
+
     </div>,
   }
 
@@ -65,7 +66,7 @@ function App() {
       let value = commands[sended];
       let command = {
         "command": <p class="sender"><span className='visitor'>visitor</span>@<span className='domain'>legrandenzo.fr</span>:~${" "} {sended}</p>,
-        "response": (value === undefined ? <p className='not-found'>Command not found</p> : value)
+        "response": (value === undefined ? <p className='not-found'>command {sended} not found</p> : value)
       }
 
       const newHistory = [...history, command];
