@@ -1,6 +1,6 @@
-import './Styles/App.css';
+import '../Styles/App.css';
 import { useEffect, useState } from 'react';
-import logo from './Assets/Images/logo.png';
+import logo from '../Assets/Images/logo.png';
 
 function App() {
 
